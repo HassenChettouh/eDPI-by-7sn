@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sensitivity Converter</title>
+</head>
+<body>
+
+<div class="converter-container">
+    <h2>حاسبة تحويل حساسية الماوس</h2>
+    <p>استعمل هذه الحاسبة لتحويل الحساسية بسهولة بين مختلف الألعاب.</p>
+
+    <div class="converter-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="from-game">التحويل من لعبة:</label>
+                <select id="from-game">
+                    <option value="valorant">Valorant</option>
+                    <option value="csgo">CS:GO / CS2 / Apex</option>
+                    <option value="overwatch">Overwatch 2</option>
+                    <option value="fortnite">Fortnite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to-game">التحويل إلى لعبة:</label>
+                <select id="to-game">
+                    <option value="valorant">Valorant</option>
+                    <option value="csgo">CS:GO / CS2 / Apex</option>
+                    <option value="overwatch">Overwatch 2</option>
+                    <option value="fortnite">Fortnite</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="from-sens">الحساسية الحالية:</label>
+                <input type="number" id="from-sens" step="0.01" placeholder="مثال: 0.4">
+            </div>
+            <div class="form-group">
+                <label for="from-dpi">الـ DPI الحالي:</label>
+                <input type="number" id="from-dpi" step="50" placeholder="مثال: 800">
+            </div>
+            <div class="form-group">
+                <label for="to-dpi">الـ DPI الجديد:</label>
+                <input type="number" id="to-dpi" step="50" placeholder="مثال: 1600">
+            </div>
+        </div>
+
+        <button id="calculate-btn">احسب</button>
+
+        <div class="results">
+            <h3>النتائج:</h3>
+            <p><strong>الحساسية الجديدة:</strong> <span id="converted-sens">-</span></p>
+            <p><strong>eDPI الجديد:</strong> <span id="edpi-result">-</span></p>
+            <p><strong>Cm/360°:</strong> <span id="cm360-result">-</span></p>
+            <p><strong>In/360°:</strong> <span id="in360-result">-</span></p>
+        </div>
+
+        <div class="action-buttons">
+            <button id="reset-btn">إعادة ضبط</button>
+            <button id="advanced-btn" disabled>متقدم (قريباً)</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

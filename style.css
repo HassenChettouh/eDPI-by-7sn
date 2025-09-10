@@ -1,0 +1,145 @@
+/* ======================================== */
+/* Dark Mode Sensitivity Converter     */
+/* (تم دمج الستايل تاعك هنا)          */
+/* ======================================== */
+
+body {
+    background-color: #1a1a1a; 
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    min-height: 100vh; /* نستعملوا min-height باش ما يصراوش مشاكل في الشاشات الطويلة */      
+    margin: 0;
+    padding: 20px 0; /* نضيف شوية فراغ علوي و سفلي */
+}
+
+/* تم تحديث اسم الكلاس و الأبعاد لتناسب التصميم الجديد */
+.converter-container {
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7); 
+    max-width: 700px; /* زدنا في العرض باش ترفد الخانات الجديدة */
+    width: 90%;
+    text-align: center;
+}
+
+/* استعملنا الألوان تاعك في العناوين */
+.converter-container h2 {
+    color: #00aaff; 
+    margin-top: 0;
+    text-align: center;
+}
+
+.converter-container p {
+    text-align: center;
+    color: #b0b0b0; /* لون أفتح قليلاً للفقرات */
+    margin-bottom: 25px;
+}
+
+/* هذا الكلاس جديد للتنظيم الأفقي */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* هذا الكلاس جديد لتنظيم كل خانة مع العنوان تاعها */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* RTL support */
+    min-width: 180px;
+}
+
+.form-group label {
+    display: block;      
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* طبقنا الستايل تاعك على الخانات و زدنا القوائم المنسدلة (select) */
+.form-group input, .form-group select {
+    width: 100%;            
+    padding: 12px;
+    box-sizing: border-box;  
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ستايل زر الحساب الرئيسي */
+#calculate-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #00aaff; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;        
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#calculate-btn:hover {
+    background-color: #0088cc; /* لون أغمق عند مرور الماوس */
+}
+
+/* طبقنا الستايل تاعك على منطقة النتائج */
+.results {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+    text-align: right; /* RTL support */
+}
+
+.results h3 {
+    margin-top: 0;
+    color: #00aaff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.results p {
+    font-size: 18px;
+}
+
+/* طبقنا اللون الأخضر تاعك على أرقام النتائج */
+.results span {
+    font-size: 22px;        
+    font-weight: bold;      
+    color: #00ffaa;        
+    margin: 0;
+    float: left; /* لجعل الرقم على اليسار */
+}
+
+/* هذا الكلاس جديد للأزرار الإضافية */
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+
+/* زر إعادة الضبط */
+#reset-btn {
+    background-color: #6c757d;
+    color: rgb(255, 255, 255);
+}
